@@ -2,14 +2,13 @@ import { injectGlobal } from 'styled-components';
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
-  html,
   body {
-    height: 100%;
+    position: absolute;
     width: 100%;
-  }
-
-  body {
+    height: 100%;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    display: flex;
+    margin: 0;
   }
 
   body.fontLoaded {
@@ -18,8 +17,8 @@ injectGlobal`
 
   #app {
     background-color: #fafafa;
-    min-height: 100%;
-    min-width: 100%;
+    display: flex;
+    flex: 1 1;
   }
 
   p,
