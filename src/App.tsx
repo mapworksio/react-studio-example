@@ -28,8 +28,9 @@ function App() {
   const [ map, setMap ] = useState<any>(null);
 
   useEffect(() => {
-    const map = Studio.init(container.current, config)
-    .once('ready', () => setMap(map));
+    if (!container?.current) return;
+    const m = Studio.init(container.current, config)
+    .once('ready', () => setMap(m));
   }, [container])
 
   useEffect(() => {
